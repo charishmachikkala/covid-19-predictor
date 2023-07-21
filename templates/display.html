@@ -1,0 +1,75 @@
+<html>
+    <head>
+    <title>Display</title>
+    <style>
+        .disease{
+            font-size:30;
+            color: mediumvioletred;
+        }
+        ul{
+            font-size:+20;
+        }
+        a{
+            color:rgba(255, 60, 0, 0.781);
+    font-size: +70;
+        }
+    </style>
+</head>
+<body style="background:url('/static/images/img3.jpg'); background-repeat:no-repeat; background-size:100% 100%;background-attachment:fixed;"><br><br>
+    <hr width="2000px" align="middle">
+    <pre><div align=middle>
+        <h2><p style="color:purple; font-family:'Times New Roman'; font-size:30px; font-size:40px">Details of <b>{{name}}</b></p></h2></div><big>
+        
+    </big><hr width="2000px" align=middle><div align="middle"><h2><i><font size=+20 color=#DD1155>Test Results</font></i></h2></div>
+    <div align="left" class="disease">
+        <b style="color:#494949">    
+                Disease                             Result</b><br>
+                COVID-19                              {{question_1}}
+                COLD AND COUGH                        {{question_2}}
+                FEVER                                 {{question_3}}
+                CHILLS                                {{question_4}}
+                BREATHING                             {{question_5}}
+                MUSCLE PAINS                          {{question_6}}
+                SOAR THROAT                           {{question_7}}
+                TASTE LESS                            {{question_8}}
+                SMELL LESS                            {{question_9}}
+                PAST 10DAYS                           {{question_10}}
+    </div></pre>
+    <h2 style="font-size:45px"><div align=middle> HERE IS YOUR RESULT</div></h2>
+    <hr width="2000px" align="middle">
+    <P><h4><div align=left>
+
+        {%if ((BREATHING=='Yes'  or BREATHING=='yes') and (COUGH=='Yes'  or COUGH=='yes') and (CHILLS=='Yes' or CHILLS=='yes')) or ((BREATHING=='Yes' or BREATHING=='yes') and (TASTE=='Yes' or TASTE=='yes') and (FEVER=='Yes' or FEVER=='yes')) %}      
+         <p style="font-size:40px"> AS PER RESULTS YOU ARE <B>MAY BE EFFECTED WITH COVID-19</B></p>
+        <ul style="font-size:35px"> 
+            <li>FOLLOW THE FOLLOWING GIVEN PRECAUTIONS</li>
+            <li>Consultant the doctor.</li>
+            <li>Don't go outside.</li>
+            <li>Stay in a bedroom and use a bathroom separate from other people in the home.</li>
+            <li>Use alcohol-based hand sanitizer.</li>
+            <li>Cover coughs and sneezes with a tissue, throw the tissue away, and then wash your hands.</li><br>
+            <li>Wear mask.</li><br>
+            <li>Practice social distancing.</li><br>
+            <li>Clean and disinfect surfaces regularly.</li><br>
+            <li>Eat healthly food.</li><br>
+            <li>Avoid touching your face.</li><br>
+        </ul>
+       
+
+        {% else %} 
+        <p style="font-size:40px; color:#297045"> YOUR ARE SAFE AND FOLLOW THE FOLLOWING PRECAUTIONS.</p>
+        <ul style="font-size:35px; color:#551B14">
+            <li>Wear mask</li>
+            <li>Practice social distancing.</li>
+            <li>Clean and disinfect surfaces regularly.</li>
+            <li>Eat healthly food.</li>
+            <li>Wash your hands frequently with soap.</li>
+            <li>Avoid touching your face.</li>
+        </ul>
+        {% endif %}
+    </div></h4></P><br><br>
+    <div align="center">
+    <a href="{{url_for('input')}}" target="_main">go back </a>
+    </div>
+</body>
+</html>

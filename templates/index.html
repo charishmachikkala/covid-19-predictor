@@ -1,0 +1,75 @@
+
+<html>
+    <head><title> Details</title>
+        <style>
+            input[type="text"]{width :300px;
+                height:45pX; 
+                font-size:large;   
+            }
+            b{
+                color:blue;
+            }
+            button{
+                background-color:green;
+                height: 50px;
+                width:150px
+            }
+            input[type='radio']{
+                width:25px;
+                height:25px
+            }
+        </style>
+    </head>
+    <body style="background:url('/static/images/Screenshot (38).png') ;background-repeat:no-repeat; background-size:2000px 3000px;"><center>
+       
+        <p><marquee style="background-color:#F0F8FF; width:600px"><font size=+20>Welcome To Our Website!!</font></marquee></p>
+        <BR><BR><div align="middle">
+         
+            <form   action="/display",method='POST'>
+             
+                
+                <!--<h3 style="color: blue;"> hello {{name}}</h3>-->
+               
+                        
+
+
+
+                
+    <p style="color:BLACK; font-family:'Times New Roman'; font-size:30px; font-size:40px" >
+        UserName: <input type="text" name="name" placeholder="User_name" required>&nbsp &nbsp
+        Age: <input type="text" name="age" placeholder="Age" required><br><br>
+        Gender: Female<input type="radio" name="Gender">
+                male<input type="radio" name="Gender"><br><br>
+                1.If you are previously effected by covid-19 Enter Yes, Else No:<br><br>
+                 
+               <input type="text" name="question_1" placeholder="Yes/No" size="50" required>
+                <br><br>
+                2.If you are suffering with <B>COLD</B> and <b>COUGH</b>. Enter Yes, else No:<br><br>
+                <input type="text" name="question_2" placeholder="Yes/No" required><br><br>
+                3.If you are suffering with <b>FEVER</b> Enter Yes, Else No:<br><br>
+                <input type="text" name="question_3" placeholder="Yes/No" required><br><br>
+                4.If you are experiencing repeated <b>SHAKING WITH CHILLS</b> Enter Yes, Else No:<br><br>
+                <input type="text" name="question_4" placeholder="Yes/No" required><br><br>
+                5.Is there is any difficulty in <b>BREATHING</b> Enter Yes, Else No:<br><br>
+                <input type="text" name="question_5" placeholder="Yes/No" required><br><br>
+                6.If you are suffering with <b>MUSCLE PAINS</b> Enter Yes, Else No:<br><br>
+                <input type="text" name="question_6" placeholder="Yes/No" required><br><br>
+                7.If you are feeling <b>SOUR IN THROAT </b>Enter Yes, Else No:<br><br>
+                <input type="text" name="question_7" placeholder="Yes/No" required><br><br>
+                8.If you are not experiencing the <b>TASTE</b> Enter Yes, Else No:<br><br>
+                <input type="text" name="question_8" placeholder="Yes/No" required><br><br>
+                9.If you are not able to <b>SENSE THE SMELL</b> Enter Yes, Else No:<br><br>
+                <input type="text" name="question_9" placeholder="Yes/No" required><br><br>
+                10.Did you go out to  another stations in the <b> past 10 days</b> Enter Yes, Else No:<br><br>
+                <input type="text" name="question_10" placeholder="Yes/No" required><br><br>
+                <button class="btn"
+                >SUBMIT</button>
+              </p>  
+            </form>
+            </div>
+            </center>
+    
+        
+        
+    </body>
+</html>
